@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background: lightgrey;
+    border-radius: 7px;
+}
+::-webkit-scrollbar-track-piece{
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 7px;
+}
+
+.img1,
+.img2,
+.img3 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /**?
+    fixed = parralel
+    scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.img1 {
+    background-image: url('../images/pexels-deva-darshan-1123972.jpg');
+    min-height: 100%;
+}
+
+.img2 {
+    background-image: url('../images/pexels-quintin-gellar-313782.jpg');
+    min-height: 400px;
+}
+
+.img3 {
+    background-image: url('../images/pexels-ricardo-esquivel-1563256.jpg');
+    min-height: 100%;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+.to-top {
+    background: transparent;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    pointer-events: none;
+    transition: all .5s;
+    opacity: 0;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media(max-width:568px) {
+
+    .img1,
+    .img2,
+    .img3 {
+        background-attachment: scroll;
+    }
+
+}
